@@ -9,6 +9,11 @@ find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
 find_package(glfw3 3.3 REQUIRED)
 
+add_executable(Framebuffers)
+
+target_sources(Framebuffers PRIVATE
+        main.cpp)
+
 add_subdirectory(${PROJECT_SOURCE_DIR}/src)
 target_compile_options(Framebuffers PUBLIC -Wall -Wextra -Wpedantic)
 target_include_directories(Framebuffers PUBLIC
@@ -19,13 +24,3 @@ target_link_libraries(Framebuffers PUBLIC
         ${GLEW_LIBRARIES}
         ${OPENGL_LIBRARIES}
         glfw)
-
-MESSAGE(STATUS ${GLEW_INCLUDE_DIR})
-MESSAGE(STATUS ${OPENGL_INCLUDE_DIR})
-MESSAGE(STATUS ${GLEW_LIBRARIES})
-MESSAGE(STATUS ${OPENGL_LIBRARIES})
-
-
-
-add_executable(Framebuffers
-        main.cpp)
