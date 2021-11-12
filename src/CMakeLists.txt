@@ -5,12 +5,5 @@ target_sources(Framebuffers PRIVATE
         OpenGLHelpers.cpp
         OpenGLRenderer.cpp
         Renderer.cpp
-        ShaderCompiler.cpp
-        ShaderProgram.cpp
-        ShaderProgramBuilder.cpp
-        ShaderProgramValidator.cpp
-        ShaderSourceLoader.cpp
-        ShaderStage.cpp
-        ShaderStageValidator.cpp
         Window.cpp
         )
