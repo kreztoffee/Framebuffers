@@ -1,6 +1,10 @@
 #include <iostream>
+#include "App.h"
 
 int main() {
-	std::cout << "Hello, world!\n";
+	App app;
+	app.prepare("Framebuffers");
+	app.mainLoop();
+	app.cleanUp();
 	return EXIT_SUCCESS;
 }
